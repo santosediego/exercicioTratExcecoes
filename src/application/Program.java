@@ -1,6 +1,5 @@
 package application;
 
-import com.sun.javafx.binding.StringFormatter;
 import java.util.Scanner;
 import model.entities.Account;
 import model.exceptions.DomainException;
@@ -40,6 +39,7 @@ public class Program {
         }
 
         sc.close();
+        System.out.println();
         System.out.println("Tudo posso Naquele que me Fortalece!!!");
         
     }

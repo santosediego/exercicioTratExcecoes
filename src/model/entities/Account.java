@@ -18,6 +18,7 @@ public class Account {
     public Account(Integer number, String holder, Double balance, Double withdrawLimit) {
         this.number = number;
         this.holder = holder;
+        this.balance = balance;
         this.withdrawLimit = withdrawLimit;
     }
 
@@ -54,13 +55,12 @@ public class Account {
     }
     
     public void withdraw(Double amount){
-        //Não pode ser o saque for maior que o limite ou
-        //Não pode se o saque se não houver saldo;
-        if(amount > balance){
-            throw new DomainException("Not enough balance");
-        }
+        
         if(amount > withdrawLimit){
             throw new DomainException("The amount exceeds withdraw limit");
+        }
+        if(amount > balance){
+            throw new DomainException("Not enough balance");
         }
         balance = balance - amount;
             

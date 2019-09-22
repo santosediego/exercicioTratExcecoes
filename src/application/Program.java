@@ -22,10 +22,11 @@ public class Program {
         sc.nextLine();
         String holder = sc.nextLine();        
         System.out.print("Initial balance: ");
-        double initialBalance = sc.nextDouble();
-        double initialLimit = sc.nextDouble();
+        double balance = sc.nextDouble();
+        System.out.print("Withdraw limit: ");
+        double withdrawLimit = sc.nextDouble();
         
-        Account account = new Account(number, holder, initialBalance, initialLimit);
+        Account account = new Account(number, holder, balance, withdrawLimit);
         
         System.out.println();
         System.out.print("Enter amout for withdraw: ");
